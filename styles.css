@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/* /*font-family: 'Josefin Sans', sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 375px;
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #fff9f9;
+}
+
+.logo {
+  height: 84px;
+  background-color: #fffdfe;
+}
+.head-logo {
+  margin-left: 30px;
+  margin-top: 26px;
+  height: 22px;
+}
+
+.hero_desktop {
+  display: none;
+}
+
+.hero_mobile {
+  width: 375px;
+}
+
+.main {
+  text-align: center;
+  position: relative;
+  top: -4px;
+  padding: 0 30px;
+  height: 466px;
+}
+
+.main_title_pink {
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-top: 64px;
+  color: #d09a9e;
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+
+.main_title_black {
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #3f3839;
+  letter-spacing: 12px;
+  line-height: 46px;
+}
+
+.main_text {
+  margin-top: 28px;
+  font-size: 14px;
+  color: #d09a9e;
+  line-height: 20px;
+}
+
+.form_email_submit {
+  margin-top: 34px;
+  position: relative;
+}
+
+.email_type_box {
+  width: 310px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #dbcbcd;
+  outline: none;
+  padding-left: 26px;
+  background-color: #fff9f9;
+  font-family: "Josefin Sans", sans-serif;
+}
+::placeholder {
+  color: #e0cccd;
+  opacity: 1;
+}
+.submit_button {
+  width: 64px;
+  height: 50px;
+  border-radius: 50px;
+  background: rgb(247, 182, 183);
+  background: linear-gradient(
+    90deg,
+    rgba(247, 182, 183, 1) 0%,
+    rgba(240, 148, 149, 1) 100%
+  );
+  box-shadow: 0px 0px 10px 5px #f6dedf;
+  border: none;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+}
+
+.submit_button:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 3px #d09a9e;
+}
+
+.email_error {
+  position: absolute;
+  top: 12px;
+  right: 5rem;
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+.validation_message {
+  position: absolute;
+  top: 54px;
+  left: 20px;
+}
+
+.footer_attribution {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #d09a9e;
+  width: 100%;
+}
+
+.attribution {
+  color: #d09a9e;
+  text-decoration: none;
+}
+
+@media (min-width: 760px) {
+  .container {
+    margin: 0 auto;
+    width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 84px 340px 120px 120px 100px;
+    grid-template-areas:
+      " logo pic"
+      "main pic"
+      " text pic"
+      "button pic"
+      "att pic";
+    background-image: url(./images/bg-pattern-desktop.svg);
+  }
+
+  .logo {
+    grid-area: logo;
+    padding: 0 130px;
+  }
+
+  .head-logo {
+    height: 40px;
+    width: 170px;
+  }
+  .hero_mobile {
+    display: none;
+  }
+  .hero_desktop {
+    display: block;
+    width: 610px;
+    height: 780px;
+    grid-area: pic;
+    position: absolute;
+    right: 0;
+  }
+
+  .main {
+    margin: 0 130px;
+    padding: 0;
+    text-align: start;
+    width: 444px;
+    position: relative;
+  }
+
+  .main_title {
+    grid-area: main;
+    font-size: 56px;
+    line-height: 64px;
+  }
+  .main_title_pink {
+    margin-top: 130px;
+  }
+  .main_text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .email_type_box {
+    width: 440px;
+  }
+
+  .submit_button {
+    width: 100px;
+  }
+  .email_error {
+    position: absolute;
+    top: 12px;
+    right: 7rem;
+  }
+
+  .attribution {
+    grid-area: att;
+    width: 830px;
+  }
+}
